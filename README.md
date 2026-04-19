@@ -1,6 +1,8 @@
-# Product Inventory System API
+# StockHub - Product Inventory System
 
-A robust, production-ready RESTful API for managing product inventory, built with Node.js, Express, TypeScript, and MongoDB.
+> 🚀 **Live Demo:** [https://sesd-ugc.onrender.com](https://sesd-ugc.onrender.com)
+
+A robust, production-ready RESTful API and Dashboard for managing product inventory, featuring a modern neon anime aesthetic.
 
 ## Features
 
