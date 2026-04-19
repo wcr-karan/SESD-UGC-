@@ -72,7 +72,7 @@
 }
 
 .product-table tbody tr {
-  border-bottom: 1px solid rgba(252, 165, 165, 0.03); /* Extremely soft separation */
+  border-bottom: 1px solid rgba(252, 165, 165, 0.03); 
   transition: var(--transition);
 }
 
@@ -128,7 +128,6 @@
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
-/* Empty state */
 .table-empty {
   padding: 60px 20px;
   text-align: center;
@@ -158,12 +157,10 @@
   color: var(--gray-400);
 }
 
-/* Scrollable on mobile */
 .table-scroll {
   overflow-x: auto;
 }
 
-/* Skeleton rows */
 .table-skeleton-row {
   display: flex;
   align-items: center;
@@ -216,7 +213,6 @@
   margin-left: auto;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .table-header {
     padding: 16px;

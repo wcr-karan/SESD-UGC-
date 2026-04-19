@@ -107,7 +107,6 @@
   text-shadow: 0 0 10px var(--danger-glow);
 }
 
-/* Skeleton Adaptations */
 .stat-card-skeleton {
   background: rgba(255, 255, 255, 0.02);
   border-radius: var(--radius-lg);

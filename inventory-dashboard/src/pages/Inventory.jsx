@@ -35,12 +35,10 @@ export default function Inventory({ searchQuery = '' }) {
   const filteredProducts = useMemo(() => {
     let result = [...products];
 
-    // Category filter
     if (categoryFilter !== 'All') {
       result = result.filter((p) => p.category === categoryFilter);
     }
 
-    // Search
     if (searchQuery.trim()) {
       const q = searchQuery.toLowerCase();
       result = result.filter(
@@ -50,7 +48,6 @@ export default function Inventory({ searchQuery = '' }) {
       );
     }
 
-    // Sort
     if (sortField) {
       result.sort((a, b) => {
         const aVal = a[sortField];

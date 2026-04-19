@@ -1,4 +1,4 @@
-/* Anime-Inspired Auth UI - Login.css */
+
 
 .login-page {
     --bg-color: #000000;
@@ -48,7 +48,6 @@
     50% { transform: translateY(-10px); }
 }
 
-/* Anime Eyes System */
 .login-page .anime-eyes {
     display: flex;
     gap: 30px;
@@ -94,7 +93,6 @@
     border-radius: 50%;
 }
 
-/* Privacy Mode (Eyes Closed) */
 .login-page .anime-eyes.privacy .eye {
     height: 2px;
     background: var(--accent-color);
@@ -106,7 +104,6 @@
     opacity: 0;
 }
 
-/* Tabs */
 .login-page .tabs {
     display: flex;
     width: 100%;
@@ -143,7 +140,6 @@
     transition: var(--transition);
 }
 
-/* Form Container */
 .login-page .form-container {
     width: 100%;
     display: none;
@@ -178,7 +174,6 @@
     opacity: 0.7;
 }
 
-/* Input Styles */
 .login-page .input-group {
     position: relative;
     margin-bottom: 15px;
@@ -228,7 +223,6 @@
     color: var(--accent-color);
 }
 
-/* Buttons */
 .login-page .primary-btn {
     width: 100%;
     background: var(--accent-color);
@@ -269,16 +263,15 @@
     border-color: var(--accent-color);
 }
 
-/* Anime Character Asset */
 .login-page .anime-character {
     position: absolute;
     bottom: -10px;
     right: -40px;
-    width: 200px; /* Larger Zoro image */
+    width: 200px; 
     opacity: 0.7;
     z-index: -1;
     pointer-events: none;
-    /* Simplified mask for mobile Safari compatibility */
+    
     -webkit-mask-image: linear-gradient(to top left, black 30%, transparent 100%);
     mask-image: linear-gradient(to top left, black 30%, transparent 100%);
     filter: brightness(0.9) contrast(1.1);

@@ -94,7 +94,7 @@ export default function Dashboard() {
 
   return (
     <div className="page-content">
-      {/* Stat Cards */}
+      
       <div className="dashboard-cards">
         {loading
           ? Array.from({ length: 4 }).map((_, i) => <CardSkeleton key={i} />)
@@ -103,7 +103,6 @@ export default function Dashboard() {
             ))}
       </div>
 
-      {/* Chart */}
       <div className="dashboard-chart-placeholder fade-in" style={{ animationDelay: '0.15s' }}>
         <div className="dashboard-chart-header">
           <h3>Inventory Value by Category</h3>
@@ -133,9 +132,8 @@ export default function Dashboard() {
         </div>
       </div>
 
-      {/* Bottom Grid */}
       <div className="dashboard-grid">
-        {/* Recent Products */}
+        
         <div className="dashboard-chart-placeholder fade-in" style={{ animationDelay: '0.25s' }}>
           <h3 className="dashboard-section-title">Recent Products</h3>
           <div className="dashboard-recent-list">
@@ -152,7 +150,6 @@ export default function Dashboard() {
           </div>
         </div>
 
-        {/* Categories Breakdown */}
         <div className="dashboard-chart-placeholder fade-in" style={{ animationDelay: '0.3s' }}>
           <h3 className="dashboard-section-title">Categories Breakdown</h3>
           <div className="dashboard-category-list">

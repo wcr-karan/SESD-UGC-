@@ -31,7 +31,7 @@ export default function Login({ onLogin }) {
         
         const angle = Math.atan2(e.clientY - eyeCenter.y, e.clientX - eyeCenter.x);
         const distance = Math.min(
-          6, // Max pupil movement radius
+          6,
           Math.hypot(e.clientX - eyeCenter.x, e.clientY - eyeCenter.y) / 20
         );
         
@@ -56,18 +56,17 @@ export default function Login({ onLogin }) {
     if (isProcessing) return;
 
     setIsProcessing(true);
-    
-    // Simulate API call
+
     setTimeout(() => {
       setIsProcessing(false);
-      onLogin(); // Trigger parent login state
+      onLogin();
     }, 1500);
   };
 
   return (
     <div className="login-page">
       <div className="auth-card" ref={cardRef}>
-        {/* Anime Eyes */}
+        
         <div className={`anime-eyes ${isPrivacyMode ? 'privacy' : ''}`}>
           <div className="eye">
             <div 
@@ -83,7 +82,6 @@ export default function Login({ onLogin }) {
           </div>
         </div>
 
-        {/* Tabs */}
         <div className="tabs">
           <button
             className={`tab-btn ${activeTab === 'login' ? 'active' : ''}`}
@@ -106,7 +104,6 @@ export default function Login({ onLogin }) {
           />
         </div>
 
-        {/* Login Form */}
         <div className={`form-container ${activeTab === 'login' ? 'active' : ''}`}>
           <div className="header">
             <h1>WELCOME</h1>
@@ -146,7 +143,6 @@ export default function Login({ onLogin }) {
           </form>
         </div>
 
-        {/* Sign Up Form */}
         <div className={`form-container ${activeTab === 'signup' ? 'active' : ''}`}>
           <div className="header">
             <h1>SIGN UP</h1>

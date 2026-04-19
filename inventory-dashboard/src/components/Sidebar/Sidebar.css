@@ -5,7 +5,7 @@
   width: var(--sidebar-width);
   height: 100vh;
   background: var(--bg-sidebar);
-  border-right: 1px solid rgba(252, 165, 165, 0.05); /* Very subtle separator */
+  border-right: 1px solid rgba(252, 165, 165, 0.05); 
   display: flex;
   flex-direction: column;
   z-index: 100;
@@ -128,7 +128,6 @@
   box-shadow: 0 0 15px rgba(248, 113, 113, 0.1);
 }
 
-/* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
   .sidebar-logo h1,
   .sidebar-nav-item span,

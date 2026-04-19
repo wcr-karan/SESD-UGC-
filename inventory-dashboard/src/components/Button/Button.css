@@ -18,7 +18,6 @@
   cursor: not-allowed;
 }
 
-/* Primary - Neon Pink Gradient */
 .btn-primary {
   background: linear-gradient(135deg, var(--primary), var(--primary-dark));
   color: #000;
@@ -35,7 +34,6 @@
   transform: translateY(0);
 }
 
-/* Secondary - Dark Glass */
 .btn-secondary {
   background: rgba(42, 42, 64, 0.4);
   color: var(--white);
@@ -50,7 +48,6 @@
   box-shadow: 0 0 15px var(--primary-glow);
 }
 
-/* Outline */
 .btn-outline {
   background: transparent;
   border: 2px solid rgba(252, 165, 165, 0.3);
@@ -63,7 +60,6 @@
   box-shadow: 0 0 15px var(--primary-glow);
 }
 
-/* Danger - Neon Red */
 .btn-danger {
   background: rgba(248, 113, 113, 0.1);
   color: var(--danger);
@@ -76,7 +72,6 @@
   box-shadow: 0 0 20px var(--danger-glow);
 }
 
-/* Ghost */
 .btn-ghost {
   background: transparent;
   color: var(--gray-500);
@@ -87,7 +82,6 @@
   color: var(--primary);
 }
 
-/* Sizes */
 .btn-sm {
   padding: 6px 14px;
   font-size: 0.8rem;

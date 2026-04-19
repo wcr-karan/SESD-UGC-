@@ -81,7 +81,6 @@
   gap: 15px;
 }
 
-/* Form Styles */
 .form-group {
   margin-bottom: 24px;
 }
@@ -144,7 +143,6 @@
   transform: scale(1.02);
 }
 
-/* Scrollbar adjustment for dark modal */
 .modal::-webkit-scrollbar-thumb {
   background: rgba(252, 165, 165, 0.2);
 }
