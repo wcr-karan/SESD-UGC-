@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aesthetic Dashboard | Main</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Dashboard Specific Styles */
+        .dashboard-content {
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .welcome-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(244, 167, 163, 0.2);
+            border-radius: 40px;
+            padding: 50px 30px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dash-icon {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            text-shadow: 0 0 15px var(--accent-glow);
+        }
+
+        h1 {
+            letter-spacing: 5px;
+            margin-bottom: 10px;
+        }
+
+        .logout-btn {
+            margin-top: 30px;
+            background: transparent;
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .logout-btn:hover {
+            background: var(--accent-color);
+            color: #000;
+            box-shadow: 0 0 15px var(--accent-glow);
+        }
+
+        .quote {
+            color: var(--text-dim);
+            font-style: italic;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+    </style>
+    <script>
+        // Session Protection
+        if (!localStorage.getItem('isLoggedIn')) {
+            window.location.href = 'index.html';
+        }
+
+        function logout() {
+            localStorage.removeItem('isLoggedIn');
+            window.location.href = 'index.html';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="dashboard-content">
+            <div class="welcome-card">
+                <div class="dash-icon">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <h1>DASHBOARD</h1>
+                <p class="subtitle">ようこそ、お帰りなさい</p>
+                <div class="quote">"The world is not beautiful: and that, in a way, is what makes it so beautiful."</div>
+                
+                <button class="logout-btn" onclick="logout()">LOGOUT</button>
+
+                <!-- Reusing character asset -->
+                <img src="character.png" alt="Anime Character" class="anime-character" style="width: 140px; bottom: -20px; right: -10px;">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

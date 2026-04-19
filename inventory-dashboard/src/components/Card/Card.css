@@ -1,0 +1,141 @@
+.stat-card {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  border: var(--glass-border);
+  box-shadow: var(--neon-shadow);
+  transition: var(--transition);
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(252, 165, 165, 0.05) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity var(--transition);
+  pointer-events: none;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(252, 165, 165, 0.1);
+  border-color: var(--primary);
+}
+
+.stat-card:hover::after {
+  opacity: 1;
+}
+
+.stat-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.stat-card-icon.blue {
+  background: rgba(252, 165, 165, 0.1);
+  color: var(--primary);
+}
+
+.stat-card-icon.green {
+  background: var(--success-glow);
+  color: var(--success);
+}
+
+.stat-card-icon.orange {
+  background: rgba(251, 191, 36, 0.1);
+  color: var(--warning);
+}
+
+.stat-card-icon.purple {
+  background: rgba(167, 139, 250, 0.1);
+  color: #a78bfa;
+}
+
+.stat-card-label {
+  font-size: 0.8rem;
+  color: var(--primary);
+  opacity: 0.7;
+  font-weight: 700;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.stat-card-value {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.stat-card-change {
+  font-size: 0.8rem;
+  margin-top: 8px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.stat-card-change.up {
+  color: var(--success);
+  text-shadow: 0 0 10px var(--success-glow);
+}
+
+.stat-card-change.down {
+  color: var(--danger);
+  text-shadow: 0 0 10px var(--danger-glow);
+}
+
+/* Skeleton Adaptations */
+.stat-card-skeleton {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.stat-card-skeleton .icon-skel {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius);
+}
+
+.stat-card-skeleton .text-skel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stat-card-skeleton .label-skel {
+  width: 60%;
+  height: 12px;
+}
+
+.stat-card-skeleton .value-skel {
+  width: 40%;
+  height: 28px;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aesthetic Auth | Welcome</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="auth-card">
+            <!-- Tabs Toggle -->
+            <div class="tabs">
+                <button id="login-tab" class="tab-btn active" onclick="switchForm('login')">LOGIN</button>
+                <button id="signup-tab" class="tab-btn" onclick="switchForm('signup')">SIGN UP</button>
+                <div class="tab-indicator"></div>
+            </div>
+
+            <!-- Login Form -->
+            <div id="login-form" class="form-container active">
+                <div class="header">
+                    <h1>WELCOME</h1>
+                    <p class="subtitle">おかえりなさい</p>
+                </div>
+                <form id="login-form-element" onsubmit="return false">
+                    <div class="input-group">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" id="login-user" placeholder="Username" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="login-pass" placeholder="Password" required>
+                    </div>
+                    <div class="options">
+                        <a href="#" class="forgot-link">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="primary-btn">LOG IN</button>
+                </form>
+                <div class="social-divider">
+                    <span>OR</span>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-google"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <!-- Sign Up Form -->
+            <div id="signup-form" class="form-container">
+                <div class="header">
+                    <h1>SIGN UP</h1>
+                    <p class="subtitle">新しく始める</p>
+                </div>
+                <form id="signup-form-element" onsubmit="return false">
+                    <div class="input-group">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" id="signup-user" placeholder="Username" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" id="signup-email" placeholder="Email Address" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="signup-pass" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="primary-btn">SIGN UP</button>
+                </form>
+                <div class="social-divider">
+                    <span>OR</span>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-google"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <!-- Anime Character -->
+            <img src="character.png" alt="Anime Character" class="anime-character">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

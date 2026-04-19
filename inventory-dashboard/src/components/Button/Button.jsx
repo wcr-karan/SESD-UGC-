@@ -1,0 +1,27 @@
+import './Button.css';
+
+export default function Button({
+  children,
+  variant = 'primary',
+  size = '',
+  icon: Icon,
+  iconSize = 16,
+  className = '',
+  ...props
+}) {
+  const classes = [
+    'btn',
+    `btn-${variant}`,
+    size && `btn-${size}`,
+    className,
+  ]
+    .filter(Boolean)
+    .join(' ');
+
+  return (
+    <button className={classes} {...props}>
+      {Icon && <Icon size={iconSize} />}
+      {children}
+    </button>
+  );
+}
